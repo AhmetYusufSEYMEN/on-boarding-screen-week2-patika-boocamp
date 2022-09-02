@@ -65,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
      * changing the button text
      */
     private fun checkData(){
-        if (binding.edtxEmailLogin.text.toString() == user.userName && binding.edtxPasswordLogin.text.toString() == user.userPassword) {
+        if (binding.edtxEmailLogin.text.toString().lowercase() == user.userName && binding.edtxPasswordLogin.text.toString().lowercase() == user.userPassword) {
             toastFun(getString(R.string.tst_login_success))
             binding.btnLogin.text = getString(R.string.success)
         } else {
