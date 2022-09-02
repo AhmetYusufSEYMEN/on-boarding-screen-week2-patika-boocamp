@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.OnBoardingActivity" >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="550dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="-40dp"
+            android:contentDescription="@string/contentDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_blue_vector" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_join_now"
+            style="@style/buttonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/join_now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView2"
+            android:layout_width="143dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="180dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/grow_together"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/let_s_get_s" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="178dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="60dp"
+            android:paddingStart="60dp"
+            android:elevation="40dp"
+            app:layout_constraintDimensionRatio="H,20:12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:srcCompat="@drawable/person_one"
+            tools:ignore="RtlSymmetry" />
+            <!-- https://prnt.sc/iLVEi-3M8UeX I used constraint ratio and padding to capture a layout image as seen in the photo in the link. -->
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="173dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="88dp"
+            android:elevation="20dp"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:srcCompat="@drawable/person_two" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/let_s_get_s"
+            style="@style/letsStartText"
+            android:layout_width="0dp"
+            android:layout_marginStart="33dp"
+
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="140dp"
+            android:text="@string/let_s_get_started"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

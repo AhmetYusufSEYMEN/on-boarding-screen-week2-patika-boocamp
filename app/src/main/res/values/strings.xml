@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Odev2FMSS</string>
+    <string name="app_name">Week2Work</string>
+    <string name="let_s_get_started">Let’s Get Started</string>
+    <string name="join_now">JOIN NOW</string>
+    <string name="grow_together">Grow Together</string>
+    <string name="contentDescription">VektorContentDescription</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="enter_your_username_password"><![CDATA[Enter Your Username & Password]]></string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgotten_password">Forgotten Password?</string>
+    <string name="or_create_a_new_account">Or Create a New Account</string>
+    <string name="error">Can not empty</string>
+    <string name="create_account">Create Account :)</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="create_username">Create Username</string>
+    <string name="create_password">Create Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="tst_login_success">Login success</string>
+    <string name="tst_login_failed">Username or password incorrect</string>
+    <string name="tst_maxChar">Maximum limit of characters reached!</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
 </resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">75dp</item>
+    </style>
+
+    <style name="buttonStyle" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:fontFamily">@font/inder</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="letsStartText">
+        <item name="android:layout_width">342dp</item>
+        <item name="android:layout_height">190dp</item>
+        <item name="android:layout_marginStart">33dp</item>
+        <item name="android:layout_marginTop">300dp</item>
+        <item name="android:layout_marginEnd">53dp</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textFontWeight">800</item>
+        <item name="android:textSize">75sp</item>
+    </style>
+
+    <style name="textButtonStyle" parent="android:Widget.Material.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="backButtonStyle">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_gravity">bottom|start</item>
+        <item name="android:backgroundTint">@color/backBtnColor</item>
+    </style>
+
+    <style name="edtxLoginStyle">
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_marginStart">43dp</item>
+        <item name="android:layout_marginEnd">52dp</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="dividerLoginStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">29dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="edtxSignUpStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">39dp</item>
+        <item name="android:layout_marginEnd">56dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="dividerSignUpStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">39dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginEnd">40dp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="txtvTitleStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+</resources>
