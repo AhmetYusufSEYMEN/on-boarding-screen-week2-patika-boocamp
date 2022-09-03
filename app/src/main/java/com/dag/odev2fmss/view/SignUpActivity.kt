@@ -23,42 +23,49 @@ class SignUpActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
 
-        /**
-         *  Actions(back to Login activity) to be taken when clicking the button
-         */
-        binding.btnBackSignUp.setOnClickListener {
-            onBackPressed()
-            overridePendingTransition(R.anim.no_animation, R.anim.slide_down)
-        }
+        binding.apply {
 
-        /**
-         * textwatcher applied to edittexts
-         */
-        binding.edtxEmail.addTextChangedListener(textWatcherEmail)
-        binding.edtxUserName.addTextChangedListener(textWatcherUser)
-        binding.edtxPassword.addTextChangedListener(textWatcherPass)
+            /**
+             *  Actions(back to Login activity) to be taken when clicking the button
+             */
+            btnBackSignUp.setOnClickListener {
+                onBackPressed()
+                overridePendingTransition(R.anim.no_animation, R.anim.slide_down)
+            }
 
-        binding.btnSignUp.setOnClickListener {
-            showUserInfo()
+            /**
+             * textwatcher applied to edittexts
+             */
+            edtxEmail.addTextChangedListener(textWatcherEmail)
+            edtxUserName.addTextChangedListener(textWatcherUser)
+            edtxPassword.addTextChangedListener(textWatcherPass)
+
+            btnSignUp.setOnClickListener {
+                showUserInfo()
+            }
         }
     }
+
     /**
      * check editext for not empty
      * showing data on toast
      * changing the button text
      */
     private fun showUserInfo(){
-        if(binding.edtxEmail.text.toString().isNotEmpty() && binding.edtxUserName.text.toString().isNotEmpty() && binding.edtxPassword.text.toString().isNotEmpty()){
-            Toast.makeText(this,
-                "Email: ${binding.edtxEmail.text.toString()} " +
-                        "Username: ${binding.edtxUserName.text.toString()} " +
-                        "Password: ${binding.edtxPassword.text.toString()}", Toast.LENGTH_LONG).show()
-            binding.btnSignUp.text = getString(R.string.success)
+        binding.apply {
+            if(edtxEmail.text.toString().isNotEmpty() && edtxUserName.text.toString().isNotEmpty() && edtxPassword.text.toString().isNotEmpty()){
+                Toast.makeText(this@SignUpActivity,
+                    "Email: ${edtxEmail.text.toString()} " +
+                            "Username: ${edtxUserName.text.toString()} " +
+                            "Password: ${edtxPassword.text.toString()}", Toast.LENGTH_LONG).show()
+                btnSignUp.text = getString(R.string.success)
+            }
+            else {
+                toastFun(getString(R.string.tst_login_failed))
+                btnSignUp.text = getString(R.string.failed)
+            }
         }
-        else {
-            toastFun(getString(R.string.tst_login_failed))
-            binding.btnSignUp.text = getString(R.string.failed)
-        }
+
     }
 
     /**

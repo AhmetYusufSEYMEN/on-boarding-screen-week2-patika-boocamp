@@ -32,30 +32,33 @@ class LoginActivity : AppCompatActivity() {
 
         myIntent = Intent(this, SignUpActivity::class.java)
 
-        /**
-         *  Actions(start SignUp activity with animation) to be taken when clicking the button
-         */
-        binding.btnCreateNewAcc.setOnClickListener {
-            startActivity(myIntent)
-            overridePendingTransition(R.anim.slide_up, R.anim.no_animation)
-        }
+        binding.apply {
 
-        /**
-         *  Actions(back to Onboarding activity) to be taken when clicking the button
-         */
-        binding.btnBackLogin.setOnClickListener {
-            onBackPressed()
-            overridePendingTransition(R.anim.no_animation, R.anim.slide_down)
-        }
+            /**
+             *  Actions(start SignUp activity with animation) to be taken when clicking the button
+             */
+            btnCreateNewAcc.setOnClickListener {
+                startActivity(myIntent)
+                overridePendingTransition(R.anim.slide_up, R.anim.no_animation)
+            }
 
-        /**
-         * textwatcher applied to edittexts
-         */
-        binding.edtxEmailLogin.addTextChangedListener(textWatcherEmail)
-        binding.edtxPasswordLogin.addTextChangedListener(textWatcherPass)
+            /**
+             *  Actions(back to Onboarding activity) to be taken when clicking the button
+             */
+            btnBackLogin.setOnClickListener {
+                onBackPressed()
+                overridePendingTransition(R.anim.no_animation, R.anim.slide_down)
+            }
 
-        binding.btnLogin.setOnClickListener {
-            checkData()
+            /**
+             * textwatcher applied to edittexts
+             */
+            edtxEmailLogin.addTextChangedListener(textWatcherEmail)
+            edtxPasswordLogin.addTextChangedListener(textWatcherPass)
+
+            btnLogin.setOnClickListener {
+                checkData()
+            }
         }
     }
 
@@ -64,13 +67,16 @@ class LoginActivity : AppCompatActivity() {
      * showing toast
      * changing the button text
      */
-    private fun checkData(){
-        if (binding.edtxEmailLogin.text.toString().lowercase() == user.userName && binding.edtxPasswordLogin.text.toString().lowercase() == user.userPassword) {
-            toastFun(getString(R.string.tst_login_success))
-            binding.btnLogin.text = getString(R.string.success)
-        } else {
-            toastFun(getString(R.string.tst_login_failed))
-            binding.btnLogin.text = getString(R.string.failed)
+    private fun checkData() {
+        binding.apply {
+            if (edtxEmailLogin.text.toString().lowercase().trim() == user.userName && edtxPasswordLogin.text.toString().lowercase().trim() == user.userPassword
+            ) {
+                toastFun(getString(R.string.tst_login_success))
+                btnLogin.text = getString(R.string.success)
+            } else {
+                toastFun(getString(R.string.tst_login_failed))
+                btnLogin.text = getString(R.string.failed)
+            }
         }
     }
 
@@ -92,6 +98,7 @@ class LoginActivity : AppCompatActivity() {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
             if (binding.edtxEmailLogin.text.toString().isEmpty()) {
                 binding.edtxEmailLogin.error = getString(R.string.error)
             }
@@ -108,12 +115,14 @@ class LoginActivity : AppCompatActivity() {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
             if (binding.edtxPasswordLogin.text.toString().isEmpty()) {
                 binding.edtxPasswordLogin.error = getString(R.string.error)
             }
             if (binding.edtxPasswordLogin.text.toString().length == 15) {
                 toastFun(getString(R.string.tst_maxChar))
             }
+
         }
     }
 
@@ -122,7 +131,7 @@ class LoginActivity : AppCompatActivity() {
      *
      * @param text text to show in toast
      */
-   private fun toastFun(text: String) {
+    private fun toastFun(text: String) {
         Toast.makeText(this@LoginActivity, text, Toast.LENGTH_SHORT).show()
     }
 }
