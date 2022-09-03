@@ -134,5 +134,5 @@ class LoginActivity : AppCompatActivity() {
     private fun toastFun(text: String) {
         Toast.makeText(this@LoginActivity, text, Toast.LENGTH_SHORT).show()
     }
-}
+} // Github Android CI Apk test Commit
 
